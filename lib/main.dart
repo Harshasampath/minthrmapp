@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       return GetMaterialApp(
         title: 'Mint HRM App',
         theme: themeController.darkTheme.value ? dark : light,
-        locale: const Locale('si'),
+        locale: const Locale('en'),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         home: const MyHomePage(title: 'Flutter Demo Home Page'),
