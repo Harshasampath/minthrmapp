@@ -1,0 +1,10 @@
+{
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "countTxt": "You have pushed the button this many times:",
+  "@countTxt": {
+    "description": "You have pushed the button this many times:"
+  }
+}
