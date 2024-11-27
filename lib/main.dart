@@ -76,16 +76,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // title: Text(AppLocalizations.of(context)!.helloWorld),
-        title: const Text(
-          'WELCOME',
-          style: TextStyle(
-            fontSize: 27.0,
-            fontFamily: 'Roboto',
-            color: Colors.red,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
+        title: Text(AppLocalizations.of(context)!.helloWorld),
+        // title: const Text(
+        //   'WELCOME',
+        //   style: TextStyle(
+        //     fontSize: 27.0,
+        //     fontFamily: 'Roboto',
+        //     color: Colors.red,
+        //     fontWeight: FontWeight.w600,
+        //   ),
+        // ),
       ),
       body: Center(
         child: Column(
