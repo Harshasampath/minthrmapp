@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
     final ThemeController themeController = Get.put(ThemeController());
     return Obx(() {
       return GetMaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Mint HRM App',
         theme: themeController.darkTheme.value ? dark : light,
         locale: const Locale('en'),
