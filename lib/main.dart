@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:minthrmapp/theame/dark_theme.dart';
 import 'package:minthrmapp/theame/light_theme.dart';
+import 'data/service.dart';
 import 'features/profile/presentation/controller/theme_controller.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -54,6 +55,21 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  String nativeData = "No data yet";
+
+  void fetchData() async {
+    try {
+      String data = await NativeCommunicator.getNativeData();
+      setState(() {
+        nativeData = data;
+      });
+    } catch (e) {
+      setState(() {
+        nativeData = "Error fetching data: $e";
+      });
+    }
+  }
+
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -68,6 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     ThemeController themeController = Get.find();
+    fetchData();
 
     return Scaffold(
       appBar: AppBar(
@@ -103,6 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            Text(nativeData)
           ],
         ),
       ),

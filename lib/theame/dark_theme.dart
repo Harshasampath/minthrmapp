@@ -14,8 +14,6 @@ ThemeData dark = ThemeData(
   dialogTheme: const DialogTheme(surfaceTintColor: Colors.black),
   colorScheme: ColorScheme(
     brightness: Brightness.dark,
-    background: const Color(0xFF212121),
-    onBackground: const Color(0xFFC3CAD9),
     primary: const Color(0xFF689da7),
     onPrimary: const Color.fromARGB(255, 247, 171, 30),
     secondary: const Color(0xFFaaa818),
