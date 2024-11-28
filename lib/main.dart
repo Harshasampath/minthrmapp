@@ -68,12 +68,28 @@ class _MyHomePageState extends State<MyHomePage> {
         //commit 3 Ama
         //commit 4 Ama
 
-        title: Text(
-          'Welcome!!',
-          style: GoogleFonts.roboto(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 35,
+        title: Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                'Welcome',
+                style: GoogleFonts.roboto(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 35,
+                ),
+              ),
+
+              //Commit 5 Ama
+
+              const SizedBox(width: 8),
+              const Icon(
+                Icons.sentiment_satisfied_alt,
+                color: Colors.white,
+                size: 35,
+              ),
+            ],
           ),
         ),
       ),
