@@ -8,7 +8,6 @@ import 'data/service.dart';
 import 'features/profile/presentation/controller/theme_controller.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-
 //harsha
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -98,7 +97,42 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            Text(nativeData)
+            Text(nativeData),
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Embed the native view
+                  const SizedBox(
+                    height: 100,
+                    width: 300,
+                    child: AndroidView(
+                      viewType: 'custom-native-view',
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  // Interact with native logic
+                  ElevatedButton(
+                    onPressed: () async {
+                      showDialog(
+                        context: context,
+                        builder: (ctx) => AlertDialog(
+                          title: const Text("Native Data"),
+                          content: Text(nativeData),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.of(ctx).pop(),
+                              child: const Text("OK"),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                    child: const Text('Get Native Data'),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
