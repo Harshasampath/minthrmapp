@@ -7,6 +7,8 @@ import 'package:minthrmapp/theame/light_theme.dart';
 import 'features/profile/presentation/controller/theme_controller.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
+//commit 2 Ama
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
