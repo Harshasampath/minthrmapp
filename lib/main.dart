@@ -6,6 +6,7 @@ import 'package:minthrmapp/theame/dark_theme.dart';
 import 'package:minthrmapp/theame/light_theme.dart';
 import 'features/profile/presentation/controller/theme_controller.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 //commit 2 Ama
 
@@ -60,21 +61,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Colors.pink,
 
-          // title: Text(AppLocalizations.of(context)!.helloWorld),
+        // title: Text(AppLocalizations.of(context)!.helloWorld),
 
-          //commit 3 Ama
+        //commit 3 Ama
+        //commit 4 Ama
 
-          title: const Text(
-            'Welcome!!',
-            style: TextStyle(
-              color: Colors.red,
-              fontWeight: FontWeight.bold,
-              fontSize: 30,
-              fontStyle: FontStyle.italic,
-            ),
-          )),
+        title: Text(
+          'Welcome!!',
+          style: GoogleFonts.roboto(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 35,
+          ),
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
