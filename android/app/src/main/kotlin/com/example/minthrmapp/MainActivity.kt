@@ -1,5 +1,4 @@
 package com.example.minthrmapp
-
 import android.content.Context
 import android.view.View
 import android.widget.TextView
